@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Noticias - Dead By NightLight</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #e4d2b5;
+      color: #111;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 20px;
+      gap: 40px;
+    }
+
+    .news-image {
+      position: relative; /* necesario para el overlay */
+      flex: 1 1 400px;
+      max-width: 500px;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .news-image img {
+      width: 100%;
+      border: 8px solid black;
+      display: block;
+    }
+
+    /* Overlay de carga para la imagen */
+    .loading-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      user-select: none;
+    }
+
+    .loading-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .news-content {
+      flex: 1 1 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .news-content h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .news-content p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .news-content .date {
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    .read-more {
+      font-size: 1rem;
+      color: #b69200;
+      text-decoration: underline;
+      cursor: pointer;
+      width: fit-content;
+    }
+
+    .read-more:hover {
+      color: #8a6c00;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="parche.html" class="news-image">
+      <img src="patch-image.png" alt="Patch Notes" />
+      <div class="loading-overlay">Cargando...</div>
+    </a>
+    <div class="news-content">
+      <div class="date">15/6/2025</div>
+      <h2>Parche de Contenido - 15 de Junio, 2025</h2>
+      <p>El 15 de Junio, agregaremos un parche que mucha gente lleva esperando al igual que yo. Después de 4 largos años de desarrollo, Dead By NightLight abre sus puertas hacía el público permitiendo y tratando de buscar un bonito sitio en la comunidad de juego de terror asimétrico en Roblox.</p>
+      <a href="Parche.html" class="read-more">Leer cambios</a>
+    </div>
+  </div>
+
+  <script>
+    function handleDelayedRedirect(event) {
+      event.preventDefault();
+      const link = event.currentTarget;
+      const href = link.getAttribute('href');
+
+      if (link.classList.contains('read-more')) {
+        const originalText = link.textContent;
+        link.textContent = 'Cargando...';
+      } else if (link.classList.contains('news-image')) {
+        const overlay = link.querySelector('.loading-overlay');
+        if (overlay) {
+          overlay.classList.add('active');
+        }
+      }
+
+      setTimeout(() => {
+        window.location.href = href;
+      }, 2000);
+    }
+
+    document.querySelectorAll('.news-image, .read-more').forEach(link => {
+      link.addEventListener('click', handleDelayedRedirect);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dead By NightLight</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #0d0d0d;
+      color: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #f2f2f2;
+      margin: 0 15px;
+      text-decoration: none;
+      position: relative;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Estilo para los enlaces en mantenimiento */
+    nav a.mantenimiento {
+      color: #ff4444;
+      cursor: not-allowed;
+    }
+
+    nav a.mantenimiento:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #ff4444;
+      color: white;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      white-space: nowrap;
+      pointer-events: none;
+      opacity: 1;
+      transition: opacity 0.3s;
+      z-index: 10;
+    }
+
+    main {
+      flex: 1;
+      padding: 40px 5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .imagen-disponible {
+      width: 100%;
+      max-width: 800px;
+      height: 200px; /* altura del recorte */
+      object-fit: cover;
+      object-position: center 50%; /* ajusta verticalmente */
+      border-radius: 5px;
+      margin-bottom: 30px;
+    }
+
+    section {
+      margin-top: 30px;
+      max-width: 800px;
+    }
+
+    section h2 {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    footer a {
+      color: #f2f2f2;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dead By NightLight</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="noticias.html">Noticias</a>
+      <a href="comunidad.html" class="mantenimiento" data-tooltip="En desarrollo">Comunidad</a>
+      <a href="tienda.html" class="mantenimiento" data-tooltip="En desarrollo">Tienda</a>
+    </nav>
+  </header>
+
+  <main>
+    <img src="ImagenIndex.jpg" alt="¡Ya disponible!" class="imagen-disponible" />
+
+    <section>
+      <h2>Bienvenido al mejor juego de terror asimétrico en Roblox</h2>
+      <p>¡Experimenta el mejor juego de terror asimétrico basado en el icónico juego de Dead By Daylight versión Roblox!</p>
+    </section>
+  </main>
+
+<footer>
+  <p>&copy; 2025 Dead By NightLight. Todos los derechos reservados.</p>
+  <p>
+    Síguenos en:
+    <a href="https://www.youtube.com/@Adeveloper_games" target="_blank" rel="noopener noreferrer">YouTube</a> |
+    <a href="https://x.com/Rafa129084" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
+  </p>
+</footer>
+</body>
+</html>
