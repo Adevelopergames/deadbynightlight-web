@@ -26,7 +26,7 @@
     }
 
     .news-image {
-      position: relative; /* necesario para el overlay */
+      position: relative;
       flex: 1 1 400px;
       max-width: 500px;
       cursor: pointer;
@@ -39,7 +39,6 @@
       display: block;
     }
 
-    /* Overlay de carga para la imagen */
     .loading-overlay {
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
@@ -102,16 +101,60 @@
   </style>
 </head>
 <body>
+
+  <!-- NOTICIA 1 -->
   <div class="container">
     <a href="parche.html" class="news-image">
-      <img src="patch-image.png" alt="Patch Notes" />
+      <img src="patch-image.png" alt="Patch Notes 15 Junio 2025" />
       <div class="loading-overlay">Cargando...</div>
     </a>
     <div class="news-content">
       <div class="date">15/6/2025</div>
       <h2>Parche de Contenido - 15 de Junio, 2025</h2>
-      <p>El 15 de Junio, agregaremos un parche que mucha gente lleva esperando al igual que yo. Después de 4 largos años de desarrollo, Dead By NightLight abre sus puertas hacía el público permitiendo y tratando de buscar un bonito sitio en la comunidad de juego de terror asimétrico en Roblox.</p>
-      <a href="Parche.html" class="read-more">Leer cambios</a>
+      <p>Después de 4 largos años de desarrollo, Dead By NightLight abre sus puertas al público con un parche muy esperado que define el inicio de esta nueva aventura en Roblox.</p>
+      <a href="parche.html" class="read-more">Leer futuros cambios que conllevará</a>
+    </div>
+  </div>
+
+  <!-- NOTICIA 2 -->
+  <div class="container">
+    <a href="parche-erroresfinalesmayo.html" class="news-image">
+      <img src="patch-erroresfinalesmayo.png" alt="Patch Notes Mayo 2025" />
+      <div class="loading-overlay">Cargando...</div>
+    </a>
+    <div class="news-content">
+      <div class="date">26/5/2025</div>
+      <h2>Parche de Solución de Errores Finales - Mayo 2025</h2>
+      <p>Este parche se centró en corregir errores fundamentales y finales en el mes de mayo. En el mes de Junio, todo cambiará radicalmente..</p>
+      <a href="parche-mayo.html" class="read-more">Leer cambios</a>
+    </div>
+  </div>
+  
+  <!-- NOTICIA 3 -->
+  <div class="container">
+    <a href="parche-erroresmayo.html" class="news-image">
+      <img src="patch-erroresmayo.png" alt="Patch Notes Mayo 2025" />
+      <div class="loading-overlay">Cargando...</div>
+    </a>
+    <div class="news-content">
+      <div class="date">23/5/2025</div>
+      <h2>Parche de Solución de Errores - Mayo 2025</h2>
+      <p>Este parche se centró en corregir errores en segundo plano que eran bastante notables durante la experiencia del jugador en ella.</p>
+      <a href="parche-mayo.html" class="read-more">Leer cambios</a>
+    </div>
+  </div>
+
+  <!-- NOTICIA 4 -->
+  <div class="container">
+    <a href="parche-abril.html" class="news-image">
+      <img src="patch-abril.png" alt="Patch Notes Abril 2025" />
+      <div class="loading-overlay">Cargando...</div>
+    </a>
+    <div class="news-content">
+      <div class="date">28/4/2025</div>
+      <h2>Actualización de Contenido - Abril 2025</h2>
+      <p>Se abrieron los servidores de emparejamiento, se agregó una nueva pantalla de carga y se remasterizó todo el menú.</p>
+      <a href="parche-abril.html" class="read-more">Leer cambios</a>
     </div>
   </div>
 
@@ -140,5 +183,6 @@
       link.addEventListener('click', handleDelayedRedirect);
     });
   </script>
+
 </body>
 </html>
